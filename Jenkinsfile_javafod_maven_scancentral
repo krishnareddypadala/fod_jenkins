@@ -1,0 +1,81 @@
+#!groovy
+
+
+pipeline {
+    agent any
+    
+    stages {
+        stage('Clone Repository') {
+            steps {
+                git 'https://github.com/krishnareddypadala/javavulnbank.git'
+            }
+        }
+        
+           stage('FOD_mvn_java') {
+            steps {
+                fodStaticAssessment applicationName: '', 
+                
+                applicationType: '', assessmentType: '', 
+                
+                attributes: '', auditPreference: '', 
+                
+                bsiToken: '', businessCriticality: '', 
+                
+                entitlementId: '', 
+                
+                entitlementPreference: '', 
+                
+                frequencyId: '', 
+                
+                inProgressBuildResultType: 'FailBuild',
+                
+                inProgressScanActionType: 'Queue', 
+                
+                isMicroservice: false, languageLevel: '', 
+                
+                microserviceName: '', 
+                
+                openSourceScan: '', 
+                
+                overrideGlobalConfig: false, 
+                
+                personalAccessToken: '', 
+                
+                releaseId: '99148', //update release id from FOD portal
+                
+                releaseName: '', 
+                
+                remediationScanPreferenceType: 'RemediationScanIfAvailable', 
+                
+                scanCentral: 'Maven', 
+                
+                scanCentralBuildCommand: '', 
+                
+                scanCentralBuildFile: 'pom.xml', 
+                
+                scanCentralBuildToolVersion: '', 
+                
+                scanCentralIncludeTests: '', 
+                
+                scanCentralRequirementFile: '', 
+                
+                scanCentralSkipBuild: '', 
+                
+                scanCentralVirtualEnv: '', 
+                
+                sdlcStatus: '', 
+                
+                srcLocation: '', 
+                
+                technologyStack: '', 
+                
+                tenantId: '', 
+                
+                username: ''
+            }
+        }
+    }
+       
+      
+    
+}
