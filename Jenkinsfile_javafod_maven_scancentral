@@ -41,7 +41,7 @@ pipeline {
                 
                 personalAccessToken: '', 
                 
-                releaseId: '99148', //update release id from FOD portal
+                releaseId: '', //update release id from FOD portal
                 
                 releaseName: '', 
                 
